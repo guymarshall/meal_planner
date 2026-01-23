@@ -13,12 +13,14 @@ use std::{
 
 use rand::prelude::*;
 
+#[derive(Debug)]
 struct Meal {
     // weighting: f64,
     // is_multi_day: bool,
     name: String,
 }
 
+#[derive(Debug)]
 enum DayOfWeek {
     Monday,
     Tuesday,
@@ -29,6 +31,7 @@ enum DayOfWeek {
     Sunday,
 }
 
+#[derive(Debug)]
 struct DayPlan<'a> {
     day: DayOfWeek,
     breakfast: &'a Meal,
@@ -36,6 +39,7 @@ struct DayPlan<'a> {
     tea: &'a Meal,
 }
 
+#[derive(Debug)]
 struct MealPlan<'a> {
     monday: DayPlan<'a>,
     tuesday: DayPlan<'a>,
@@ -115,4 +119,6 @@ fn main() {
         saturday: saturday_plan,
         sunday: sunday_plan,
     };
+
+    println!("Meal plan: {:?}", meal_plan);
 }
