@@ -19,24 +19,68 @@ function get_random($meals): Meal
     return new Meal($meals[$randomIndex]);
 }
 
-function main()
-{
-    $breakfasts = file("breakfasts.txt");
-    $dinners = file("dinners.txt");
+$breakfasts = file("breakfasts.txt");
+$dinners = file("dinners.txt");
 
-    $mondayPlan = new DayPlan(DayOfWeek::Monday, get_random($breakfasts), get_random($dinners), get_random($dinners));
-    $tuesdayPlan = new DayPlan(DayOfWeek::Tuesday, get_random($breakfasts), get_random($dinners), get_random($dinners));
-    $wednesdayPlan = new DayPlan(DayOfWeek::Wednesday, get_random($breakfasts), get_random($dinners), get_random($dinners));
-    $thursdayPlan = new DayPlan(DayOfWeek::Thursday, get_random($breakfasts), get_random($dinners), get_random($dinners));
-    $fridayPlan = new DayPlan(DayOfWeek::Friday, get_random($breakfasts), get_random($dinners), get_random($dinners));
-    $saturdayPlan = new DayPlan(DayOfWeek::Saturday, get_random($breakfasts), get_random($dinners), get_random($dinners));
-    $sundayPlan = new DayPlan(DayOfWeek::Sunday, get_random($breakfasts), get_random($dinners), get_random($dinners));
+$mondayPlan = new DayPlan(DayOfWeek::Monday, get_random($breakfasts), get_random($dinners), get_random($dinners));
+$tuesdayPlan = new DayPlan(DayOfWeek::Tuesday, get_random($breakfasts), get_random($dinners), get_random($dinners));
+$wednesdayPlan = new DayPlan(DayOfWeek::Wednesday, get_random($breakfasts), get_random($dinners), get_random($dinners));
+$thursdayPlan = new DayPlan(DayOfWeek::Thursday, get_random($breakfasts), get_random($dinners), get_random($dinners));
+$fridayPlan = new DayPlan(DayOfWeek::Friday, get_random($breakfasts), get_random($dinners), get_random($dinners));
+$saturdayPlan = new DayPlan(DayOfWeek::Saturday, get_random($breakfasts), get_random($dinners), get_random($dinners));
+$sundayPlan = new DayPlan(DayOfWeek::Sunday, get_random($breakfasts), get_random($dinners), get_random($dinners));
 
-    $mealPlan = new MealPlan($mondayPlan, $tuesdayPlan, $wednesdayPlan, $thursdayPlan, $fridayPlan, $saturdayPlan, $sundayPlan);
+$mealPlan = new MealPlan($mondayPlan, $tuesdayPlan, $wednesdayPlan, $thursdayPlan, $fridayPlan, $saturdayPlan, $sundayPlan);
 
-    echo '<pre>';
-    print_r($mealPlan);
-    echo '</pre>';
-}
+?>
 
-main();
+<style>
+    table,
+    th,
+    td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+</style>
+<table style="width:100%">
+    <tr>
+        <th></th>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>Wednesday</th>
+        <th>Thursday</th>
+        <th>Friday</th>
+        <th>Saturday</th>
+        <th>Sunday</th>
+    </tr>
+    <tr>
+        <td>Breakfast</td>
+        <td><?php echo $mealPlan->monday->breakfast->name ?></td>
+        <td><?php echo $mealPlan->tuesday->breakfast->name ?></td>
+        <td><?php echo $mealPlan->wednesday->breakfast->name ?></td>
+        <td><?php echo $mealPlan->thursday->breakfast->name ?></td>
+        <td><?php echo $mealPlan->friday->breakfast->name ?></td>
+        <td><?php echo $mealPlan->saturday->breakfast->name ?></td>
+        <td><?php echo $mealPlan->sunday->breakfast->name ?></td>
+    </tr>
+    <tr>
+        <td>Lunch</td>
+        <td><?php echo $mealPlan->monday->lunch->name ?></td>
+        <td><?php echo $mealPlan->tuesday->lunch->name ?></td>
+        <td><?php echo $mealPlan->wednesday->lunch->name ?></td>
+        <td><?php echo $mealPlan->thursday->lunch->name ?></td>
+        <td><?php echo $mealPlan->friday->lunch->name ?></td>
+        <td><?php echo $mealPlan->saturday->lunch->name ?></td>
+        <td><?php echo $mealPlan->sunday->lunch->name ?></td>
+    </tr>
+    <tr>
+        <td>Tea</td>
+        <td><?php echo $mealPlan->monday->tea->name ?></td>
+        <td><?php echo $mealPlan->tuesday->tea->name ?></td>
+        <td><?php echo $mealPlan->wednesday->tea->name ?></td>
+        <td><?php echo $mealPlan->thursday->tea->name ?></td>
+        <td><?php echo $mealPlan->friday->tea->name ?></td>
+        <td><?php echo $mealPlan->saturday->tea->name ?></td>
+        <td><?php echo $mealPlan->sunday->tea->name ?></td>
+    </tr>
+</table>
