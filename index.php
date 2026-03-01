@@ -32,38 +32,10 @@ $mealPlan = new MealPlan($mondayPlan, $tuesdayPlan, $wednesdayPlan, $thursdayPla
 
 ?>
 
-<style>
-    .meal-table {
-        border-collapse: collapse;
-        table-layout: fixed;
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-        width: 100%;
-        max-width: 900px;
-
-        margin: 20px auto;
-
-        font-family: Arial, sans-serif;
-        background-color: #fff;
-    }
-
-    .meal-table th,
-    .meal-table td {
-        border: 1px solid #ccc;
-        padding: 10px;
-        text-align: center;
-        transition: background-color 0.15s ease;
-    }
-
-    .meal-table th {
-        background-color: #f2f2f2;
-        font-weight: bold;
-    }
-
-    .meal-table td:first-child {
-        font-weight: bold;
-        background-color: #fafafa;
-    }
-</style>
 <table class="meal-table">
     <tr>
         <th></th>
