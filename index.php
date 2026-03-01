@@ -32,49 +32,59 @@ $mealPlan = new MealPlan($mondayPlan, $tuesdayPlan, $wednesdayPlan, $thursdayPla
 
 ?>
 
+<!DOCTYPE html>
+<html lang="en-GB">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Planner</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
-<table class="meal-table">
-    <tr>
-        <th></th>
-        <th>Monday</th>
-        <th>Tuesday</th>
-        <th>Wednesday</th>
-        <th>Thursday</th>
-        <th>Friday</th>
-        <th>Saturday</th>
-        <th>Sunday</th>
-    </tr>
-    <tr>
-        <td>Breakfast</td>
-        <td><?php echo $mealPlan->monday->breakfast->name ?></td>
-        <td><?php echo $mealPlan->tuesday->breakfast->name ?></td>
-        <td><?php echo $mealPlan->wednesday->breakfast->name ?></td>
-        <td><?php echo $mealPlan->thursday->breakfast->name ?></td>
-        <td><?php echo $mealPlan->friday->breakfast->name ?></td>
-        <td><?php echo $mealPlan->saturday->breakfast->name ?></td>
-        <td><?php echo $mealPlan->sunday->breakfast->name ?></td>
-    </tr>
-    <tr>
-        <td>Lunch</td>
-        <td><?php echo $mealPlan->monday->lunch->name ?></td>
-        <td><?php echo $mealPlan->tuesday->lunch->name ?></td>
-        <td><?php echo $mealPlan->wednesday->lunch->name ?></td>
-        <td><?php echo $mealPlan->thursday->lunch->name ?></td>
-        <td><?php echo $mealPlan->friday->lunch->name ?></td>
-        <td><?php echo $mealPlan->saturday->lunch->name ?></td>
-        <td><?php echo $mealPlan->sunday->lunch->name ?></td>
-    </tr>
-    <tr>
-        <td>Tea</td>
-        <td><?php echo $mealPlan->monday->tea->name ?></td>
-        <td><?php echo $mealPlan->tuesday->tea->name ?></td>
-        <td><?php echo $mealPlan->wednesday->tea->name ?></td>
-        <td><?php echo $mealPlan->thursday->tea->name ?></td>
-        <td><?php echo $mealPlan->friday->tea->name ?></td>
-        <td><?php echo $mealPlan->saturday->tea->name ?></td>
-        <td><?php echo $mealPlan->sunday->tea->name ?></td>
-    </tr>
-</table>
+<body>
+    <table class="meal-table">
+        <tr>
+            <th></th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+            <th>Saturday</th>
+            <th>Sunday</th>
+        </tr>
+        <tr>
+            <td>Breakfast</td>
+            <td><?php echo $mealPlan->monday->breakfast->name ?></td>
+            <td><?php echo $mealPlan->tuesday->breakfast->name ?></td>
+            <td><?php echo $mealPlan->wednesday->breakfast->name ?></td>
+            <td><?php echo $mealPlan->thursday->breakfast->name ?></td>
+            <td><?php echo $mealPlan->friday->breakfast->name ?></td>
+            <td><?php echo $mealPlan->saturday->breakfast->name ?></td>
+            <td><?php echo $mealPlan->sunday->breakfast->name ?></td>
+        </tr>
+        <tr>
+            <td>Lunch</td>
+            <td><?php echo $mealPlan->monday->lunch->name ?></td>
+            <td><?php echo $mealPlan->tuesday->lunch->name ?></td>
+            <td><?php echo $mealPlan->wednesday->lunch->name ?></td>
+            <td><?php echo $mealPlan->thursday->lunch->name ?></td>
+            <td><?php echo $mealPlan->friday->lunch->name ?></td>
+            <td><?php echo $mealPlan->saturday->lunch->name ?></td>
+            <td><?php echo $mealPlan->sunday->lunch->name ?></td>
+        </tr>
+        <tr>
+            <td>Tea</td>
+            <td><?php echo $mealPlan->monday->tea->name ?></td>
+            <td><?php echo $mealPlan->tuesday->tea->name ?></td>
+            <td><?php echo $mealPlan->wednesday->tea->name ?></td>
+            <td><?php echo $mealPlan->thursday->tea->name ?></td>
+            <td><?php echo $mealPlan->friday->tea->name ?></td>
+            <td><?php echo $mealPlan->saturday->tea->name ?></td>
+            <td><?php echo $mealPlan->sunday->tea->name ?></td>
+        </tr>
+    </table>
+</body>
+
+</html>
