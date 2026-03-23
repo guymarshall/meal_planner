@@ -1,4 +1,5 @@
-.vscode/
-target/
+/target
+/.vscode
+
 breakfasts.txt
 dinners.txt
